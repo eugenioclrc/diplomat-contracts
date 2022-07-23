@@ -22,7 +22,6 @@ module.exports = {
     apiKey: {
       polygonMumbai: process.env.ETHERSCANKEY,
       polygon: process.env.ETHERSCANKEY,
-      cronos: process.env.CRONOSKEY
     },
   },
   networks: {
@@ -37,7 +36,7 @@ module.exports = {
       */
     },
     mumbai: {
-      url: 'https://mumbai.infura.io/v3/' + process.env.INFURAKEY,
+      url: 'https://mumbai.infura.io/v3/' + process.env.INFURA_KEY,
       chainId: 80001,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : undefined,
     }, 
@@ -67,5 +66,9 @@ module.exports = {
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : undefined,
       chainId: 77
     },
+    kovan: {
+      url: "https://kovan.infura.io/v3/" + process.env.INFURA_KEY,
+      chainId: 42
+    },   
   }
 };
