@@ -24,16 +24,8 @@ contract Diplomat is ERC1155, ERC1155Supply, Ownable {
         return _urls[id];
     }
 
-    function getAllowedDiplomats(address minter) public view returns (uint256[] memory allowed) {
-        uint256[] memory _diplomats = _diplomatsPerMinter[minter];
-        allowed = new uint256[](_diplomats.length);
-        for(uint256 i; i < _diplomats.length;) {
-            allowed[i] = _diplomats[i];
-            unchecked {
-                ++i;
-            }
-        }
-        return allowed;
+    function getAllowedDiplomats(address minter) public view returns (uint256[] memory) {
+        return _diplomatsPerMinter[minter];
     }
 
     function setContractURI(string memory contractURI_) external onlyOwner {
