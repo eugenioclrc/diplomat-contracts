@@ -1,4 +1,4 @@
-# DIPLOMAT
+# DIPLOMATICS
 
 A simple but powerful solution to allow approved institutions and mint a SBT as certificate in the participant address.
 
